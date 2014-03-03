@@ -10,6 +10,7 @@ Last week we wrote tests that made sure our data layer did it was supposed to, b
 
 ### Notes
 
+    // Mocked req and res objects
     var res = {
       status: function(val) {
         this._status = val
@@ -31,5 +32,9 @@ Last week we wrote tests that made sure our data layer did it was supposed to, b
         })
       }
     }
+
+    var usersRoutes = App.route('usersRoutes')
+
+    usersRoutes.create(req,res)
 
 [Episode code](https://github.com/LearnAllTheNodes/episode00016)
